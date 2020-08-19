@@ -1,0 +1,17 @@
+<h5>Restaurant Details:</h5>
+<ul>
+  <li><%= @restaurant.name %></li>
+  <li><%= @restaurant.phone_number %></li>
+  <li><%= @restaurant.address %></li>
+  <li><%= @restaurant.category.capitalize %></li>
+</ul>
+
+<h5>Reviews:</h5>
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= "#{review.content} - #{review.rating}" %></li>
+  <% end %>
+</ul>
+
+ <%= link_to "Write Review  ", new_restaurant_review_path(@restaurant) %>
+ <%= link_to "Back to List", restaurants_path %>
