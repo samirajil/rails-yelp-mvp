@@ -1,6 +1,5 @@
-<h5>Restaurant Details:</h5>
+<h5><%= @restaurant.name %></h5>
 <ul>
-  <li><%= @restaurant.name %></li>
   <li><%= @restaurant.phone_number %></li>
   <li><%= @restaurant.address %></li>
   <li><%= @restaurant.category.capitalize %></li>
@@ -13,8 +12,9 @@
   <% end %>
 </ul>
 
-<h2>Add a review:</h2>
+<h5>Add a review:</h5>
 <%= render 'reviews/form' %>
-
- <%= link_to "Write Review  ", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
- <%= link_to "Back to List", restaurants_path, class: "btn btn-primary" %>
+<div class="backtolist-btn">
+  <%= link_to "Back to List", restaurants_path, class: "btn btn-primary" %>
+</div>
+ 
