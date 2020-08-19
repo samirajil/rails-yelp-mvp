@@ -13,5 +13,8 @@
   <% end %>
 </ul>
 
- <%= link_to "Write Review  ", new_restaurant_review_path(@restaurant) %>
- <%= link_to "Back to List", restaurants_path %>
+<h2>Add a review:</h2>
+<%= render 'reviews/form' %>
+
+ <%= link_to "Write Review  ", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+ <%= link_to "Back to List", restaurants_path, class: "btn btn-primary" %>
